@@ -1,0 +1,60 @@
+### 老版字符串格式化方法%：
+ %s   将参数格式化为字符串
+%.2f  表示一个带有2位小数的数字
+ %d   表示一个整数
+
+
+### 新版字符串格式化方法str.format()：
+该网页有更详细的阐述---→https://www.cnblogs.com/songdanlee/p/11105807.html
+
+1、按照默认顺序，不指定位置
+>>>print("{} {}".format("hello","world") )
+hello world
+
+2、设置指定位置，可以多次使用
+>>>print("{0} {1} {0}".format("hello","or"))
+hello or hello
+
+3、使用字典格式化
+>>>person = {"name":"Yvette","age":20}
+>>>print("My name is {name}. I am {age} years old.".format(**person))
+My name is Yvette. I am 20 years old.
+
+4、通过列表格式化
+>>>stu = ["Yvette","Python"]
+>>>print("My name is {0[0]}, I love {0[1]}!".format(stu))
+My name is Yvette, I love Python!
+
+
+# 数字格式化
+>>> {:.2f} 保留小数点后两位
+eg  3.1415926 变为 3.14
+>>> {:+.2f} 带符号保留小数点后两位
+eg  3.1415926 变为 +3.14 
+eg  -1 变为 -1.00 
+>>> {:.0f} 不带小数
+eg  2.71828 变为 3 
+>>> {:0>2d} 数字补零(填充左边, 宽度为2)
+eg  5 变为 05 
+>>> {:x<4d} 数字补x(填充右边, 宽度为4)
+eg  5  变为 5xxx 
+eg  10 变为 10xx
+>>> {:,} 以逗号分隔的数字格式
+eg  1000000 变为 1,000,000 
+>>> {:.2%} 百分比格式
+eg  0.25 变为 25.00% 
+>>> {:.2e} 科学计数法
+eg  1000000000 变为 1.00e+09
+>>> {:10d} 右对齐(默认, 宽度为10)
+>>> {:<10d} 左对齐(宽度为10)
+>>> {:^10d} 中间对齐(宽度为10)
+
+
+# 进制转换
+>>> '{:b}'.format(number) 二进制
+>>> '{:d}'.format(number) 十进制
+>>> '{:o}'.format(number) 八进制
+>>> '{:x}'.format(number) 十六进制
+
+
+
