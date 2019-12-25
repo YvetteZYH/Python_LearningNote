@@ -53,10 +53,18 @@ sorted(students, key=lambda s: s[2], reverse=True)        # 按年龄降序排�
 
 
 ###
+map
+###
+-->描述：
+map() 会根据提供的函数对指定序列做映射。
+-->语法：
+map(function, iterable, ...)
+第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。
+！注意：Python3中的map内置函数，返回结果为一个迭代器，要转化为列表才能打印出结果。
+
 
 ###
 
-
-
+###
 
 
